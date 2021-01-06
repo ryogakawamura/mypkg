@@ -1,6 +1,3 @@
-# SPDX-LICENSE-Identifer: BSD-2-Clause
-# Copyright (C) 2020 Ryuichi Ueda. All rights reserved.
-
 #!/usr/bin/env python3
 
 import rospy
