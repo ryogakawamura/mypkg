@@ -1,3 +1,8 @@
+// SPDX-LICENSE-Identifer: GPL-3.0
+/*
+ * Copyright (C) 2020 Ryuichi Ueda. All rights reserved.
+ */
+
 #!/usr/bin/env python3
 
 import rospy
