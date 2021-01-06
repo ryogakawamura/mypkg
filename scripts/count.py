@@ -1,4 +1,4 @@
-// SPDX-LICENSE-Identifer: GPL-3.0
+// SPDX-LICENSE-Identifer: BSD-2
 /*
  * Copyright (C) 2020 Ryuichi Ueda. All rights reserved.
  */
