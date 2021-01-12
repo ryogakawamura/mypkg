@@ -7,8 +7,7 @@ n = 0
 
 def cb(message):
 	global n
-	n = message.data
-	if 3 in n:
+	if 3 in (message.data):
 		n = 333333
 
 rospy.init_node('nabe')
