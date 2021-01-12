@@ -6,13 +6,15 @@ from std_msgs.msg import Int32
 n = 0
 
 def cb(message):
-    global n
-    n = message.data*2
+	global n
+	n = message.data
+	if 3 in n:
+		n = 333333
 
-rospy.init_node('twice')
+rospy.init_node('nabe')
 sub = rospy.Subscriber('count_up', Int32, cb)
-pub = rospy.Publisher('twice', Int32, queue_size=1)
+pub = rospy.Publisher('nabeatsu', Int32, queue_size=1)
 rate = rospy.Rate(10)
 while not rospy.is_shutdown():
-    pub.publish(n)
-    rate.sleep()
+	pub.publish(n)
+	rate.sleep()
