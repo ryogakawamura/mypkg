@@ -4,28 +4,22 @@
 
 ## 概要 
   
-  課題: 講義で作ったデバイスドライバを改造して、LEDやモータ、あるいはその他なにかデバイスを動かせるようにして、動かしている様子を動画に撮影する。
-  (講義中に作成したドライバhttps://github.com/ryuichiueda/robosys_device_drivers/blob/master/myled.c)
-  
+  第10回で作成したROSのパッケージをベースに、オリジナリティーある改造をして、GitHubに置く。  
+  ROSで動かしている様子をビデオに撮影してYouTubeに公開する  
+    
 ---
 
 ## 動作環境
   
 ・Ubuntu 20.04  
 ・Raspberry Pi 4 Model B  
-(GPIOピンは25番とGNDを使用)  
   
 ---
 
 ## 使用したもの
   
   ・Raspberry Pi 4 Model B：1台  
-  ・ブレッドボード：1個  
-  ・青色LED：1個  
-  ・ジャンパー線(M-M)：1本  
-  ・ジャンパー線(M-F)：2本  
-  ・抵抗220Ω：2個  
-  
+    
 ---
 
 ## デモ動画へのリンク
@@ -56,6 +50,6 @@
 
 ## ライセンス
   
-  [BSD 2-Clause "Simplified" License](https://github.com/ryogakawamura/mypkg/blob/main/LICENSE)
+  [BSD 3-Clause "New" or "Revised" License](https://github.com/ryogakawamura/mypkg/blob/main/LICENSE)
 
 ---
