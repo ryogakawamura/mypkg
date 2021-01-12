@@ -9,7 +9,7 @@ def cb(message):
 	
 	if 3 in n:
 		word = 'San!!!!'
-	else
+	else:
 		word = '......'
 
 rospy.init_node('nabe')
