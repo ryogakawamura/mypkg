@@ -4,8 +4,8 @@
 
 ## 概要 
   
-  第10回で作成したROSのパッケージをベースに、オリジナリティーある改造をして、GitHubに置く。  
-  ROSで動かしている様子をビデオに撮影してYouTubeに公開する  
+  2つのノードにより、カウントアップしていく数字の中に3が含まれていると3を出力する。  
+  3が含まれていなければ0を出力する。
     
 ---
 
@@ -13,13 +13,8 @@
   
 ・Ubuntu 20.04  
 ・Raspberry Pi 4 Model B  
-  
----
+・ROS Noetic  
 
-## 使用したもの
-  
-  ・Raspberry Pi 4 Model B：1台  
-    
 ---
 
 ## デモ動画へのリンク
@@ -28,23 +23,29 @@
   
 ---
 
-## インストール方法
+## 実行方法
   
   実行する手順は以下の通りです。  
   
-  `$ git clone https://github.com/ryogakawamura/myled.git  `  
-  `$ cd myled  `  
-  `$ make  `  
-  `$ sudo insmod myled.ko `  
-  `$ sudo chmod 666 /dev/myled0  `  
-  `$ sudo [0 or 1] > /dev/myled0  `  
+  端末1  
+  `$ cd ~/catkin_ws/src  `  
+  `$ git clone https://github.com/ryogakawamura/mypkg.git  `  
+  `$ cd ~/catkin_ws  `  
+  `$ catkin_make  `  
+  `$ roscore &  `  
+  `$ cd ~/catkin_ws/src/mypkg/scripts  `  
+  `$ chmod +x count.py  `  
+  `$ chmod +x nabeatsu.py  `  
+  `$ rosrun mypkg count.py  `  
   
----
-
-## 使用方法
-
-  `$ echo 0 > /dev/myled0  `：LED消灯  
-  `$ echo 1 > /dev/myled1  `：LED点灯  
+  端末2  
+  `$ rosrun mypkg nabeatsu.py  `  
+  
+  端末3  
+  `$ rostopic echo /count_up  `  
+  
+  端末4  
+  `$ rostopic echo /nabeatsu  `  
   
 ---
 
