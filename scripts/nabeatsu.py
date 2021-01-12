@@ -19,7 +19,7 @@ def cb(message):
 rospy.init_node('nabe')
 sub = rospy.Subscriber('count_up', Int32, cb)
 pub = rospy.Publisher('nabeatsu', Int32, queue_size=1)
-rate = rospy.Rate(1)
+rate = rospy.Rate(7)
 while not rospy.is_shutdown():
 	pub.publish(word)
 	rate.sleep()
