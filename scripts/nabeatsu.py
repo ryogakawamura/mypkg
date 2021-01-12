@@ -4,6 +4,9 @@ import rospy
 from std_msgs.msg import String
 from std_msgs.msg import Int32
 
+n = 0
+word = 0
+
 def cb(message):
 	global n
 	global word
