@@ -11,10 +11,10 @@ def cb(message):
 	global word
 	n = message.data
 	
-	if '3' in n:
-		word = '3'
+	if 3 in n:
+		word = 3
 	else:
-		word = ''
+		word = 0
 
 rospy.init_node('nabe')
 sub = rospy.Subscriber('count_up', Int32, cb)
