@@ -11,7 +11,7 @@ def cb(message):
 	global word
 	n = message.data
 	
-	if 3 in n:
+	if '3' in n:
 		word = '3'
 	else:
 		word = ''
