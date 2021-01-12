@@ -6,6 +6,7 @@ from std_msgs.msg import Int32
 
 def cb(message):
 	global n
+	global word
 	n = message.data
 	
 	if 3 in n:
